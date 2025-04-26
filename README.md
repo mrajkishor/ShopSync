@@ -56,6 +56,34 @@ Built for non-tech-savvy shopkeepers, ShopSync offers a simple UI (Hindi support
 
 ![Architecture Diagram](docs/architecture.png) *(Placeholder: Diagram in `docs/` ...to be added...)*
 
+
+#### Diagram Structure (ASCII)
+```
+[Shopkeeper] ----> [MFE Web App]
+                        |
+                        | (REST APIs)
+                        v
+[Microservices] <----> [MongoDB]
+   |   |   |   |   |
+   |   |   |   |   +--> [Analytics Service]
+   |   |   |   +------> [Logistics Service] ----> [DAG Scheduler]
+   |   |   +----------> [Forecasting Service] ---> [Cloud GNN]
+   |   +--------------> [Inventory Service] -----> [Invoice App API]
+   +------------------> [Auth Service]
+
+[MFE Web App] ----> [Edge Device]
+                        |
+                        | (Local Processing)
+                        v
+                   [Edge AI] <----> [SQLite]
+                        |
+                        | (Sync)
+                        v
+                   [AWS IoT Greengrass] ----> [MongoDB]
+```
+
+
+
 - **Frontend**:
   - Mobile: React Native (IMS app, ShopSync insights).
   - Web: Next.js (responsive dashboard, POS support).
