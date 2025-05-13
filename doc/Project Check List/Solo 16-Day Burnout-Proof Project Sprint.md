@@ -45,7 +45,7 @@
 
 #### 🟥 **Phase 4: Documentation, Testing & Deployment** (25–29 May)
 
-**Goal**: Make it MCA + FAANG + demo-ready
+**Goal**: Make it MCA demo-ready
 
 * [ ] 25–26 May:
 
