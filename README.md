@@ -54,8 +54,9 @@ Built for non-tech-savvy shopkeepers, ShopSync offers a simple UI (Hindi support
 
 ## 🏗️ Architecture
 
-![Architecture Diagram](docs/architecture.png) *(Placeholder: Diagram in `docs/` ...to be added...)*
+![Architecture Diagram](Untitled-2024-10-23-2240.excalidraw.png)
 
+---
 
 #### Diagram Structure (ASCII)
 ```
